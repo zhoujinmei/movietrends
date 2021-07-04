@@ -1,0 +1,126 @@
+extends layout
+
+block content
+    br
+    // breadcrumb
+    //
+      <div>
+      <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item">Movies</a></li>
+      </ol>
+      </nav>
+      </div>
+    // title
+    .container
+      .card.text-center
+        .card-header.border-light
+          ul.nav.nav-tabs.card-header-tabs
+            li.nav-item
+              a.nav-link.active(href='#')
+                h4 Upcoming movies
+        // content
+        div
+        .card-group
+          .card-body(style='width: 18rem;')
+            a.thumbnail(href='/movie')
+              img(src='/img/movies/CRUELLA.jpeg' alt='cruella')
+            .card-body
+              h5.card-title CRUELLA
+            .card-body
+              p Card link
+              p Another link
+          .card-body(style='width: 18rem;')
+            a.thumbnail(href='/movie')
+              img(src='/img/movies/CRUELLA.jpeg' alt='cruella')
+            .card-body
+              h5.card-title CRUELLA
+            .card-body
+              p Card link
+              p Another link
+          .card-body(style='width: 18rem;')
+            a.thumbnail(href='/movie')
+              img(src='/img/movies/CRUELLA.jpeg' alt='cruella')
+            .card-body
+              h5.card-title CRUELLA
+            .card-body
+              p Card link
+              p Another link
+          .card-body(style='width: 18rem;')
+            a.thumbnail(href='/movie')
+              img(src='/img/movies/CRUELLA.jpeg' alt='cruella')
+            .card-body
+              h5.card-title CRUELLA
+            .card-body
+              p Card link
+              p Another link
+          .card-body(style='width: 18rem;')
+            a.thumbnail(href='/movie')
+              img(src='/img/movies/CRUELLA.jpeg' alt='cruella')
+            .card-body
+              h5.card-title CRUELLA
+            .card-body
+              p Card link
+              p Another link
+          .card-body(style='width: 18rem;')
+            a.thumbnail(href='/movie')
+              img(src='/img/movies/CRUELLA.jpeg' alt='cruella')
+            .card-body
+              h5.card-title CRUELLA
+            .card-body
+              p Card link
+              p Another link
+          .card-body(style='width: 18rem;')
+            a.thumbnail(href='/movie')
+              img(src='/img/movies/CRUELLA.jpeg' alt='cruella')
+            .card-body
+              h5.card-title CRUELLA
+            .card-body
+              p Card link
+              p Another link
+          .card-body(style='width: 18rem;')
+            a.thumbnail(href='/movie')
+              img(src='/img/movies/CRUELLA.jpeg' alt='cruella')
+            .card-body
+              h5.card-title CRUELLA
+            .card-body
+              p Card link
+              p Another link
+          .card-body(style='width: 18rem;')
+            a.thumbnail(href='/movie')
+              img(src='/img/movies/CRUELLA.jpeg' alt='cruella')
+            .card-body
+              h5.card-title CRUELLA
+            .card-body
+              p Card link
+              p Another link
+        // pagination
+        nav(aria-label='Page navigation example')
+          ul.pagination.justify-content-center
+            li.page-item.disabled
+              a.page-link(href='#' tabindex='-1' aria-disabled='true') Previous
+            li.page-item
+              a.page-link(href='#') 1
+            li.page-item
+              a.page-link(href='#') 2
+            li.page-item
+              a.page-link(href='#') 3
+            li.page-item
+              a.page-link(href='#') Next
+    // footer
+    footer.bs-docs-footer
+      .container-fluid(style='background-color: #080808;')
+        .row
+          div(clas='col-md-4 col-md-offset-1')
+            a(href='#') Help
+            br
+            a(href='#') About MovieTrends
+            br
+            a(href='#') Contact Us
+          .col-md-4
+          p Follow MovieTrends
+          div
+      .row
+        .col-md-8.col-md-offset-2
+          | Copyright &copy; MovieTrends. All rights reserved.

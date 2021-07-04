@@ -1,0 +1,122 @@
+extends layout
+
+block content
+  
+  // breadcrumb
+  .container
+    div
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='/') Home
+          li.breadcrumb-item
+            a(href='/movielist') Movies
+          li.breadcrumb-item.active(aria-current='page') Cruella
+    // content
+    .container
+      // title
+      .row.bg-light
+        .col-md-6
+          h3 Cruella
+        .col-md-6
+          ul
+            li trends
+            li
+      // picture video
+      .card
+        .row
+          .col-md-4.col-md-offset-2
+            img(src='/img/movies/Cruella_lg.jpeg' alt='...')
+          .col-md-8.col-md-offset-2
+            iframe(width='788' height='465' src='https://www.youtube.com/embed/jpZrVxvG3mk' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+      // description
+      .card.text-dark.border-light
+        .card-header
+          h4 About Cruella
+        .card-body
+          h5.card-title Information
+          p.card-text
+            | Academy Award (R) winner Emma Stone (&quot;La La Land&quot;) stars in Disney&apos;s &quot;Cruella,&quot; an all-new live-action feature film about the rebellious early days of one of cinemas most notorious - and notoriously fashionable - villains, the legendary Cruella de Vil. &quot;Cruella,&quot; which is set in 1970s London amidst the punk rock revolution, follows a young grifter named Estella, a clever and creative girl determined to make a name for herself with her designs. She befriends a pair of young thieves who appreciate her appetite for mischief, and together they are able to build a life for themselves on the London streets. One day, Estella&apos;s flair for fashion catches the eye of the Baroness von Hellman, a fashion legend who is devastatingly chic and terrifyingly haute, played by two-time Oscar (R) winner Emma Thompson (&quot;Howards End,&quot; &quot;Sense &amp; Sensibility&quot;). But their relationship sets in motion a course of events and revelations that will cause Estella to embrace her wicked side and become the raucous, fashionable and revenge-bent Cruella.
+          table.table.table-striped
+            tr
+              td Director:
+              td Kenneth Branagh
+            tr
+              td Writers:
+              td Ashley Miller (screenplay) (as Ashley Edward Miller), Zack Stentz (screenplay)
+            tr
+              td Stars:
+              td Chris Hemsworth, Anthony Hopkins, Natalie Portman
+      // photos
+      .card.text-dark.border-light
+        .card-header
+          h4 Crulla Photos
+        .row
+          .col-md-2
+            .card
+              img(src='/img/movies/cruella-1.jpeg' alt='...')
+          .col-md-2
+            .card
+              img(src='/img/movies/cruella-2.jpeg' alt='...')
+          .col-md-2
+            .card
+              img(src='/img/movies/cruella-3.jpeg' alt='...')
+          .col-md-2
+            .card
+              img(src='/img/movies/cruella-4.jpeg' alt='...')
+          .col-md-2
+            .card
+              img(src='/img/movies/cruella-5.jpeg' alt='...')
+          .col-md-2
+            .card
+              img(src='/img/movies/cruella-6.jpeg' alt='...')
+    .container
+      h4 Cruella reviews
+      .row
+        .col
+          fieldset(style='width: 500px;')
+            label(for='comment')
+            textarea(name='comment')
+        fieldset
+          input(type='submit' value='Create')
+    br
+    // flip photoss
+    //
+      <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+      <img src="./public/img/movies/cruella-1.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+      <img src="./public/img/movies/cruella-5.jpeg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+      <img src="./public/img/movies/cruella-6.jpeg" class="d-block w-100" alt="...">
+      </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+      </button>
+      </div>
+    // user comment
+  // footer
+  footer.bs-docs-footer
+    .container-fluid(style='background-color: #080808;')
+      .row
+        div(clas='col-md-4 col-md-offset-1')
+          a(href='#') Help
+          br
+          a(href='#') About MovieTrends
+          br
+          a(href='#') Contact Us
+        .col-md-4
+        p Follow MovieTrends
+        div
+    .row
+      .col-md-8.col-md-offset-2
+        | Copyright &copy; MovieTrends. All rights reserved.

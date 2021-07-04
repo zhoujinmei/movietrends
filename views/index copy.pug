@@ -1,0 +1,146 @@
+doctype html
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css' integrity='sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ' crossorigin='anonymous')
+  title movietrends
+.container-fluid
+  // navigation
+  .container-fluid
+    nav.navbar.navbar-expand-lg.navbar-light(style='background-color: #e3f2fd;')
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='index.html')
+            img(src='./public/img/logo.png' alt='MovieTrends')
+        form.d-flex.navbar-form
+          input.form-control.me-2(type='search' placeholder='Find movies' aria-label='Search')
+          button.btn.btn-outline-success(type='submit') Search
+        p.navbar-text.navbar-right
+          a.navbar-link(href='#') Sign in |
+          a.navbar-link(href='#') Sign up
+br
+// carouse
+.container
+  #carouselExampleControls.carousel.slide(data-bs-ride='carousel')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='./public/img/movies/classic-movie-posters.jpeg' alt='...')
+      .carousel-item
+        img.d-block.w-100(src='./public/img/movies/The-Wolverine-Banner.png' alt='...')
+      .carousel-item
+        img.d-block.w-100(src='./public/img/movies/new-releases.jpeg' alt='...')
+    button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.visually-hidden Previous
+    button.carousel-control-next(type='button' data-bs-target='#carouselExampleControls' data-bs-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.visually-hidden Next
+  br
+  // content
+  .card.text-center
+    .card-header.border-light
+      ul.nav.nav-tabs.card-header-tabs
+        li.nav-item
+          a.nav-link.active(href='#')
+            h4 Upcoming movies
+    .card-group
+      .card-body(style='width: 18rem;')
+        a.thumbnail(href='#')
+          img(src='./public/img/movies/CRUELLA.jpeg' alt='cruella')
+        .card-body
+          h5.card-title CRUELLA
+        .card-body
+          p Card link
+          p Another link
+      .card-body(style='width: 18rem;')
+        a.thumbnail(href='#')
+          img(src='./public/img/movies/CRUELLA.jpeg' alt='cruella')
+        .card-body
+          h5.card-title CRUELLA
+        .card-body
+          p Card link
+          p Another link
+      .card-body(style='width: 18rem;')
+        a.thumbnail(href='#')
+          img(src='./public/img/movies/CRUELLA.jpeg' alt='cruella')
+        .card-body
+          h5.card-title CRUELLA
+        .card-body
+          p Card link
+          p Another link
+      .card-body(style='width: 18rem;')
+        a.thumbnail(href='#')
+          img(src='./public/img/movies/CRUELLA.jpeg' alt='cruella')
+        .card-body
+          h5.card-title CRUELLA
+        .card-body
+          p Card link
+          p Another link
+    .card.text-center
+      .card-header.border-light
+        ul.nav.nav-tabs.card-header-tabs
+          li.nav-item
+            a.nav-link.active(href='#')
+              h4 Upcoming movies
+          li.pull-right
+            a(href='#settings' aria-controls='setting' role='tab' data-toggle='tab') more&gt;&gt;
+      .card-group
+        .card-body(style='width: 18rem;')
+          a.thumbnail(href='#')
+            img(src='./public/img/movies/CRUELLA.jpeg' alt='cruella')
+          .card-body
+            h5.card-title CRUELLA
+          .card-body
+            p Card link
+            p Another link
+        .card-body(style='width: 18rem;')
+          a.thumbnail(href='#')
+            img(src='./public/img/movies/CRUELLA.jpeg' alt='cruella')
+          .card-body
+            h5.card-title CRUELLA
+          .card-body
+            p Card link
+            p Another link
+        .card-body(style='width: 18rem;')
+          a.thumbnail(href='#')
+            img(src='./public/img/movies/CRUELLA.jpeg' alt='cruella')
+          .card-body
+            h5.card-title CRUELLA
+          .card-body
+            p Card link
+            p Another link
+        .card-body(style='width: 18rem;')
+          a.thumbnail(href='#')
+            img(src='./public/img/movies/CRUELLA.jpeg' alt='cruella')
+          .card-body
+            h5.card-title CRUELLA
+          .card-body
+            p Card link
+            p Another link
+  // footer
+  .container-fluid
+    footer.bs-docs-footer
+      .container-fluid(style='background-color: #080808;')
+        .row
+          div(clas='col-md-4 col-md-offset-1')
+            a(href='#') Help
+            br
+            a(href='#') About MovieTrends
+            br
+            a(href='#') Contact US
+          .col-md-4
+          p Follow MovieTrends
+          div
+      .row
+        .col-md-8.col-md-offset-2
+          | Copyright &copy; MovieTrends. All rights reserved.
+  // Optional JavaScript
+  // jQuery first, then Popper.js, then Bootstrap JS
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js' integrity='sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT' crossorigin='anonymous')
