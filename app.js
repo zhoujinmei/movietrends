@@ -1,18 +1,19 @@
 var createError = require('http-errors');
 var express = require('express');
-const mongoClient = require('mongodb').MongoClient;
-const ObjectID = require('mongodb').ObjectID;
-const bodyParser = require('body-parser');
-const urlEncodedParser = bodyParser.urlencoded({extended:false});
-mongoClient.connect(dburl,function(err,client){
-  console.log('Connected with DB');
-})
-const dburl = "mongodb://localhost:27017";
-const app = express();
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var port = 3001;
+//create module - 1.Import the module
+var mongoose = require('mongoose');
+
+//2.set up default db connection
+mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser:true, useUnifiedTopology: true});
+
+//3.get the default connection
+var db = mongoose.connection; 
+db.on('error', console.error.bind(console,'MongoDB connection error'));
+db.once('open',()=>console.log('Connected to Mongoose'))
 var passport = require('passport');
 
 var indexRouter = require('./routes/index');
