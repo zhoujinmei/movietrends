@@ -1,3 +1,6 @@
+if (process.env.NODE_ENV !== 'production' ){
+  require('dotenv').config()
+}
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -8,13 +11,15 @@ var port = 3001;
 var mongoose = require('mongoose');
 
 //2.set up default db connection
+console.log('url:', process.env.DATABASE_URL)
 mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser:true, useUnifiedTopology: true});
 
 //3.get the default connection
 var db = mongoose.connection; 
 db.on('error', console.error.bind(console,'MongoDB connection error'));
 db.once('open',()=>console.log('Connected to Mongoose'))
-var passport = require('passport');
+ 
+// var passport = require('passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -22,10 +27,13 @@ var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
 var movieRouter = require('./routes/movie');
 var movielistRouter=require('./routes/movielist');
-var initializePassport=require('./routes/passport-config');
+var starRouter = require('./routes/star')
+var directorRouter = require('./routes/director')
+var addmovieRouter = require('./routes/addmovie')
+// var initializePassport=require('./routes/passport-config');
 const { listenerCount } = require('events');
 
-initializePassport(passport);
+// initializePassport(passport);
 var app = express();
 
 // view engine setup
@@ -44,6 +52,9 @@ app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/movie', movieRouter);
 app.use('/movielist', movielistRouter);
+app.use('/star',starRouter);
+app.use('/director',directorRouter);
+app.use('/addmovie',addmovieRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

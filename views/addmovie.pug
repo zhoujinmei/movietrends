@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  div.create-container
+    h2 Add New Movie
+    form(action="/movielist",  method="post")
+      div
+        span movieName:
+        input(type="text", placeholder="movie name", required="required", name="movieName")
+      div
+        span publishDate:
+        input(type="date", placeholder="select date", required="required", name="publishDate")
+      div
+        span duration:
+        input(type="text", placeholder="h and min", required="required", name="duration")
+      div
+        span description:
+        textarea(type="textarea", placeholder="movie information and description", name="description")
+      div
+        span directors:
+        input(type="text", placeholder="directors", name="director" required="required")
+      div
+        span stars:
+        input(type="text", placeholder="strars", name="stars" required="required")
+      div
+        span writers:
+        input(type="text", placeholder="writers", name="writers")
+      div
+        span coverImageName:
+        input(type="file", name="coverImageName")
+      span videoLink:
+      input(type="text", name="director" required="required")
+      span photos:
+      input(type="file",  name="photos")
+      input(type="file",  name="photos")
+      input(type="file",  name="photos")
+      input(type="file",  name="photos")
+      input(type="file",  name="photos")
+      input(type="file",  name="photos")
+      input(type="file",  name="photos")
+      input(type="file",  name="photos")
+      span createdAt:
+      input(type="date", placeholder="directors", name="director" required="required")
+      br
+      br
+      button Create

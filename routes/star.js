@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET movies listing. */
+/* GET login page. */
 router.get('/', function(req, res, next) {
-    res.render('movielist', { title: 'movieslist' });
+  res.render('star', { title: 'Star Information' });
 });
 
-module.exports = router;
+module.exports = router
